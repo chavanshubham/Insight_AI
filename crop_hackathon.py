@@ -187,9 +187,7 @@ print('Accuracy:', round(accuracy, 2), '%.')
 # Saving model to disk
 pickle.dump(rf_clf, open('crop.pkl','wb'))
 
-# Loading model to compare the results
-model = pickle.load(open('crop.pkl','rb'))
-print(model.predict([[5,2000,14,19.75]]))
+
 
 
 
