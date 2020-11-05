@@ -19,12 +19,6 @@ import pickle
 from os.path import expanduser
 from os.path import join
 
-#import ads.environment.ml_runtime
-#from ads.dataset.factory import DatasetFactory
-#from ads.evaluations.evaluator import ADSEvaluator
-#from ads.dataset.dataset_browser import DatasetBrowser
-#from ads.common.model import ADSModel
-#from ads.common.data import MLData
 
 from sklearn import tree
 from sklearn.linear_model import LogisticRegression
@@ -35,7 +29,6 @@ from sklearn.metrics import fbeta_score
 
 from scipy import stats
 
-#get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 # In[2]:
@@ -64,20 +57,7 @@ df
 df.isnull().sum()
 
 
-# In[8]:
 
-
-#path_file = "/home/datascience/ricedata.csv"
-#binary_fk = DatasetFactory.open(df,format='csv',target="RICE YIELD (Kg per ha)").sample(frac = 0.1)
-
-
-# In[ ]:
-
-
-
-
-
-# In[9]:
 
 
 from sklearn import preprocessing
@@ -107,19 +87,6 @@ for i in df.columns:
         df.drop([i],axis=1,inplace=True)
 
 
-# In[12]:
-
-
-#train, test = binary_fk.train_test_split(test_size=0.15)
-#X_train = train.X.values
-#y_train = train.y.values
-#X_test = test.X.values
-#y_test = test.y.values
-
-
-# In[ ]:
-
-
 
 
 
@@ -140,9 +107,6 @@ df['Dist_Name']
 # Print df.head for checking the transformation
 #
 df.head()
-df.to_csv('Rice_Data.csv')
-a=pd.read_csv('Rice_Data.csv')
-a
 
 
 # In[40]:
