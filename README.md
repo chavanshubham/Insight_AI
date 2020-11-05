@@ -1,4 +1,4 @@
-## ML-Model-Flask-Deployment
+## ML-AI-CROP-SELECTOR-Model-Flask-Deployment
 This is a demo project to elaborate how Machine Learning Models for crop yield prediction are deployed on production using Flask API
 
 ### Prerequisites
