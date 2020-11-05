@@ -6,7 +6,7 @@ You must have Scikit Learn, Pandas (for Machine Leraning Model) and Flask (for A
 
 ### Project Structure
 This project has five major parts :
-1. crop_hackathon.py - This contains code for our Machine Learning model and creating of our Machine Learning model pickle file.
+1. crop_hackathon.py - This contains code for our Machine Learning model and creating of our Machine Learning model pickle file using the ricedata.csv dataset containing rice crop production data.
 2. app.py - This contains Flask APIs that receives employee details through GUI or API calls, computes the precited value based on our model and returns it.
 3. request.py - This uses requests module to call APIs already defined in app.py and displays the returned value.
 4. templates - This folder contains the HTML template to allow user to enter employee detail and displays the predicted employee salary.
