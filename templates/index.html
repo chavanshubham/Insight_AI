@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Crop Yield</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+
+      <select name="state" class="post_status">
+        <option value="14">Chhattisgarh</option>
+        <option value="1">Andhra Pradesh</option>
+        </select>
+    
+    <select name="year" class="post_status">
+      <option value="1999">1999</option>
+      <option value="2000">2000</option>
+      <option value="2001">2001</option>
+      <option value="2002">2002</option>
+      <option value="2003">2003</option>
+      </select>
+
+      <select name="district" class="post_status">
+        <option value="1">Durg</option>
+        <option value="3">Raipur</option>
+        <option value="4">Bilaspur</option>
+        <option value="49">Guntur</option>
+        <option value="48">Krishna</option>
+        <option value="45">Vishakhapatnam</option>
+    </select>
+
+      
+
+    <label for="n">N (Kg Per ha)</label>
+    <input type="text" class="form-control" name="n" id="post_tags">
+
+    <label for="p">P (Kg Per ha)</label>
+    <input type="text" class="form-control" name="p" id="post_tags">
+    
+    <label for="k">K (Kg Per ha)</label>
+    <input type="text" class="form-control" name="k" id="post_tags">
+    
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+</body>
+</html>
