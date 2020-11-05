@@ -19,12 +19,12 @@
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
 
-      <select name="state" class="post_status">
+      <select name="state" class="post">
         <option value="14">Chhattisgarh</option>
         <option value="1">Andhra Pradesh</option>
         </select>
     
-    <select name="year" class="post_status">
+    <select name="year" class="post">
       <option value="1999">1999</option>
       <option value="2000">2000</option>
       <option value="2001">2001</option>
@@ -32,7 +32,7 @@
       <option value="2003">2003</option>
       </select>
 
-      <select name="district" class="post_status">
+      <select name="district" class="post">
         <option value="1">Durg</option>
         <option value="3">Raipur</option>
         <option value="4">Bilaspur</option>
